@@ -1,0 +1,11 @@
+Title,User ID,Supervisor ID,User Role,First Name,Last Name,Full Name,Email,Password,Phone Number,Position,Employement Status,IsRemembered,Avatar
+"1","1",,"Admin","Lâm","Võ","Lâm Võ","lam.vkt@kpim.vn","Lammartial09122002@","0818106669",,,"true","60643338-5474-45bb-84c2-cf89433a3c05.jpeg"
+"2","2","5","Member","Hải","Nguyễn","Hải Nguyễn","hai.nguyen@kpim.vn","123@","0987654321","CTO","Full-time","true","44c12c8e-b3f6-4dd1-8c63-71e96fa01968.png"
+"3","3","2","Member","Quân","Trịnh","Quân Trịnh","quan.tq@kpim.vn","1234@","0123456789","Software Engineer","Intern","false","1148414a-c2b7-4d6c-8057-e18566bd9f8a.jpeg"
+"4","4","2","Member","Mạnh","Nguyễn","Mạnh Nguyễn","manh.nd@kpim.vn","hello@","0978763335","Data Engineer","Full-time","false","d8cd7183-63dd-4a26-b47c-ecee1606622f.jpeg"
+"5","5",,"Member","Đức","Nguyễn","Đức Nguyễn","duc.nguyen@kpim.vn","888@","0894837774","CEO","Full-time","false",
+"6","6","5","Member","Kiên","Nguyễn","Kiên Nguyễn","kien.nv@kpim.vn","666@","0489834448","Software Engineer","Part-time","false",
+"7","7",,"Member","Vĩ","Nguyễn","Vĩ Nguyễn","vi.nt@kpim.vn","999@","0837389990","Software Engineer","Full-time","false","bd8b581a-da75-4625-9eff-a34dc28f3cb7.png"
+"8","8",,"HR","Thức","Trần","Thức Trần","thuc.tm@kpim.vn","123@","0975654487","Business Analyst","Full-time","false","1d9895b9-ad9c-4073-8912-02d1135025f4.jpeg"
+"9","9",,"HR","Nguyệt","Vũ","Nguyệt Vũ","nguyet.vm@kpim.vn","321@","0987488894",,"Full-time","false",
+"10","10",,"Member","Phúc","Phạm","Phúc Phạm","phuc.pham@kpim.vn","567@","0878214449","COO","Full-time","false","f3c9893f-ccbe-47a0-ba24-3172ae5dbbd5.jpeg"
