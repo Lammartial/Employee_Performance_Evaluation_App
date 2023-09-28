@@ -1,0 +1,645 @@
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+  font-family:'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+  position: fixed;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+  z-index: 999; /* Ensure it's below the confirmation box */
+}
+
+/* LOGIN FORM CSS */
+.auth-form-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.login-form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin-left: -85px;
+  margin-top: 20px; */
+}
+
+.login-button-group {
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150vw;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.remember-checkbox {
+  display: inline-block;
+  align-items: center;
+  font-size: 0.9rem; /* Adjust as needed */
+  font-weight: bold;
+  margin-left: -180px;
+  color: black;
+  border-color: RGBA(0, 18, 107, 1)
+
+}
+
+.remember-checkbox input[type="checkbox"] {
+  transform: scale(1.5); /* Adjust the scale factor as needed */
+  margin-right: 8px; /* Add some spacing between the checkbox and text */
+}
+
+.login-button {
+  border-color: transparent;
+  background-color: RGBA(56, 96, 178, 1);
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  width: 100px;
+  margin-left: 60px;
+}
+
+.login-button:hover {
+  background-color: RGBA(
+    calc(56 - 56 * 0.2),   /* R component */
+    calc(96 - 96 * 0.2),   /* G component */
+    calc(178 - 178 * 0.2), /* B component */
+    1                      /* Alpha value */
+); /* Darken the color on hover */
+}
+
+.login-button:active {
+  background-color: white;
+  color: RGBA(56, 96, 178, 1);
+  border-color: RGBA(56, 96, 178, 1)
+}
+
+
+.welcome-login-text {
+  text-align: left;
+  font-size: 2.1rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: black;
+  margin-left: 27vw;
+  margin-top: 135px; /* Adjust the margin-top as needed */
+}
+
+.login-to-continue-text{
+  text-align: left;
+  font-size: 0.8rem; /* Adjust the font size as needed */
+  font-weight: 550;
+  color: RGBA(39, 67, 125, 1);
+  margin-left: 30vw;
+  margin-top: 10px; /* Adjust the margin-top as needed */
+}
+
+.login-as-text{
+
+  font-size: 1.1rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: black;
+  margin-top: 15px; /* Adjust the margin-top as needed */
+  margin-left: 5vw;
+}
+
+
+input[type = "email"] {
+  
+  margin: 0.6rem 0;
+  padding: 0.6rem;
+  border: 1px solid RGBA(0, 18, 107, 1);
+  border-radius: 0px;
+  width: 85vw;
+  margin-left: 5vw;
+  margin-top: 40px;
+  /* background-image: url("data:image/svg+xml;utf8, <svg%20%20viewBox%3D%270%200%202048%202048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27><path%20d%3D%27M2048%20384v1280H0V384h2048zM143%20512l881%20441%20881-441H143zm1777%201024V648l-896%20447-896-447v888h1792z%27%20fill%3D%27%23004e8c%27><%2Fpath><%2Fsvg>"); 
+  background-repeat: no-repeat;
+  background-position: right ; */
+
+}
+
+input[type = "password"] {
+  
+  margin: 0.4rem 0;
+  padding: 0.6rem;
+  border: 1px solid RGBA(0, 18, 107, 1);
+  border-radius: 0px;
+  width: 85vw;
+  margin-left: 5vw;
+  /* background-image: url("data:image/svg+xml;utf8, <svg%20%20viewBox%3D%270%200%202048%202048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27><path%20d%3D%27M2048%20384v1280H0V384h2048zM143%20512l881%20441%20881-441H143zm1777%201024V648l-896%20447-896-447v888h1792z%27%20fill%3D%27%23004e8c%27><%2Fpath><%2Fsvg>"); 
+  background-repeat: no-repeat;
+  background-position: right ; */
+
+}
+
+
+.login-image {
+  width: 100vw;
+  height: 30vh; /* Set the height to 1/3 of the viewport height */
+  object-fit: fit;
+  position: absolute;
+  top: 0; /* Position the image at the top of the page */
+  left: 0;
+}
+
+.logo-image {
+  width: 70px; /* Adjust the width of the logo as needed */
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  z-index: 1; /* Place the logo above the banner image */
+
+}
+
+/* Style for the role dropdown */
+.role-dropdown {
+  margin-top: 15px; /* Adjust the margin as needed */
+  margin-left: 5vw;
+  padding: 8px;
+  border: 1px solid RGBA(0, 18, 107, 1);
+  border-radius: 0;
+  width: 90vw;
+}
+
+.login-error-message {
+  /* color: red; */
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: 120px;
+}
+
+
+/* WELCOME PAGE */
+
+.welcome-container {
+  text-align: center;
+}
+
+.welcome-image {
+  width: 100vw;
+  max-height: 40vh;
+  object-fit: fit;
+  position: absolute;
+  top: 55px;
+  left: 0px;
+}
+
+.performance-title {
+  font-size: 1.7rem;
+  position: relative;
+  color: RGBA(39, 67, 125, 1);
+  top: 135px;
+}
+
+.evaluation-title {
+  font-size: 1.5rem;
+  font-weight: normal;
+  position: relative;
+  top: 115px;
+  color: RGBA(39, 67, 125, 1)
+}
+
+.description {
+  color: RGBA(39, 67, 125, 1);
+  font-size: 0.9rem;
+  top: 125px;
+  max-width: 80%;
+  position: relative;
+  margin-left: 45px;
+  text-align: left;
+}
+
+.get-started-button {
+  background-color: RGBA(56, 96, 178, 1);
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-color:transparent ;
+  position:relative;
+  border-radius: 16px;
+  cursor: pointer;
+  top: 160px;
+  
+}
+
+.get-started-button:hover {
+  
+  background-color: RGBA(
+      calc(56 - 56 * 0.2),   /* R component */
+      calc(96 - 96 * 0.2),   /* G component */
+      calc(178 - 178 * 0.2), /* B component */
+      1)                   /* Alpha value */
+  }
+
+.get-started-button:active {
+    background-color: white;
+    color: RGBA(56, 96, 178, 1);
+    border-color: RGBA(56, 96, 178, 1)
+  }
+  
+
+  /* Nav bar CSS */
+
+.nav-bar{
+  background-color: RGBA(244, 244, 244, 0.9) !important;
+  border-style: solid;
+  border-width: 1px;
+  border-color: RGBA(56, 96, 178, 1) !important;
+  height: 100vh;
+  position: "fixed"
+}
+
+.toggle-icon{
+  background-color: RGBA(56, 96, 178, 1) !important;
+  position: absolute;
+  bottom: 2px;
+}
+
+.admin-label{
+  position: absolute;
+  left: 90px;
+  top: 21px;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.indicator{
+
+  position: absolute;
+  width: 6px;
+  height: 50px;
+}
+
+.separating-line{
+  background: RGBA(56, 96, 178, 1) !important;
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
+  height: 1px;
+  border: none;
+}
+
+.nav-avatar{
+  border-radius: 60%;
+
+}
+
+.name-label{
+  position: absolute;
+  bottom: 45px;
+  left: 70px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.email-label{
+  position: absolute;
+  bottom: 23px;
+  left: 70px;
+  font-size: 13px;
+  font-weight: 600
+}
+
+/* Action component style */
+.action-component{
+  width: 190px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  left: 15px;
+  bottom: 80px;
+  border-style: solid;
+  border-color: RGBA(39, 67, 125, 1) !important;
+  z-index: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -6px;
+  width: 200px;
+  height: 97px; /* Adjust the height as needed */
+  padding: 5px;
+}
+
+.gallery-column {
+  display: flex;
+}
+
+.gallery-item {
+  display: flex;
+  width: 187px;
+  align-items: center;
+  border:normal;
+  border-color: black;
+  padding: 10px;
+}
+
+/* Change the background color on hover */
+.gallery-item:hover {
+  background-color: RGBA(237,237,237,1); /* Change to your desired hover color */
+}
+
+/* Change the background color on press */
+.gallery-item:active {
+  background-color: RGBA(56, 96, 178, 1); /* Change to your desired pressed color */
+  color: white;
+
+}
+
+.gallery-item svg {
+  width: 24px; /* Adjust the icon size as needed */
+  height: 24px;
+  color: RGBA(0, 18, 107, 1);
+  margin-right: 10px
+}
+
+
+/* Change the icon color on press */
+.gallery-item:active svg {
+  fill: white; /* Change to your desired pressed icon color */
+}
+
+.action-label {
+  margin:0;
+  font-size: 14px;
+  font-weight: 550;
+
+}
+
+.avatar{
+  vertical-align: middle;
+  position: absolute;
+  bottom: 17px;
+  left: 7px
+}
+
+/* HOME PAGE */
+.rectangle {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 67px;
+  width: 100vw;
+  height: 63px;
+  background: RGBA(56, 96, 178, 1.2);
+}
+
+.title-label{
+  position: absolute;
+  top: 18px;
+  left: 85px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.separating-line1{
+  background: RGBA(56, 96, 178, 1) !important;
+  position: absolute;
+  top: 120px;
+  left: 85px;
+  width: 70vw;
+  height: 1px;
+  border: none;
+}
+
+
+/* Overview component */
+
+.overview-component{
+    position: absolute;
+    top: 155px;
+    left: 66px;
+    width: 306px;
+    height: 430px;
+    /* border-style: solid;
+    border-color: RGBA(39, 67, 125, 1) !important; */
+}
+
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 59px;
+  width: 200px;
+  height: 140px; /* Adjust the height as needed */
+  /* padding: 0px; */
+}
+
+
+.overview-column {
+  display: flex;
+}
+
+.overview-item {
+  display: flex;
+  width: 152px;
+  align-items: center;
+  border:normal;
+  border-color: black;
+}
+
+.overview-item-container{
+  width: 140px;
+  height: 140px;
+  background-color: RGBA(241, 244, 249, 1);
+  border-style: solid;
+  border-color: RGBA(39, 67, 125, 1) !important;
+}
+
+
+/* Change the background color on press */
+.overview-item:active {
+  color: black;
+
+}
+
+.overview-item svg {
+  width: 24px; /* Adjust the icon size as needed */
+  height: 24px;
+  color: RGBA(0, 18, 107, 1);
+  margin-right: 10px
+}
+
+.overview-label {
+  margin:0;
+  font-size: 17px;
+  font-weight: normal;
+  margin-top: 25px; 
+  text-align: left;
+  margin-left: 10px;
+}
+
+.number{
+  color: RGBA(39, 67, 125, 1);
+  /* position: absolute;
+  left: -35px;
+  top: 10px; */
+  margin-left: -100px;
+  margin-top: 28px;
+  
+}
+
+
+/* USER PAGE */
+
+
+/* Scrollable container */
+
+.gallery-container {
+  max-height: 100vh; /* Set your desired maximum height */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds max height */
+  position: absolute;
+  left: 65px;
+  top: 63px;
+  width: 100vw;
+}
+
+.gallery-container-item{
+ 
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 30px; 
+}
+
+/* Smaller user galleries */
+
+.user-gallery {
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds max height */
+  scrollbar-width: none; /* Hide default scrollbar (Firefox) */
+  -ms-overflow-style: none; /* Hide default scrollbar (IE/Edge) */
+  width: 100vw;
+  /* position: absolute;
+  left: 0px; */
+}
+
+/* Webkit (Chrome, Safari, Opera) scrollbar styles */
+.user-gallery::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar width */
+}
+
+/* Webkit scrollbar track */
+.user-gallery::-webkit-scrollbar-track {
+  background-color: transparent; /* Background color behind the scrollbar */
+}
+
+/* Webkit scrollbar thumb (the draggable part) */
+.user-gallery::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners on the thumb */
+}
+
+.user-gallery-item {
+  border: 0.1px solid RGBA(0, 18, 107, 1);
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  height: 60px;
+  display: flex;
+  align-items: center; 
+  gap: 30px; 
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.search-bar{
+
+  position: absolute;
+  left: 85px;
+  top: 13px;
+  width: 60vw;
+  height: 37px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.cancel-button{
+
+  position: absolute;
+  left: 240px;
+  top: 13px;
+  width: 40vw;
+  height: 37px;
+  background-color: RGBA(56, 96, 178, 1.2);
+}
+
+/* Confirm Delete */
+.confirm-delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 22%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.cancel-button1 {
+  display: inline-block;
+  padding: 7px 25px; /* Adjust padding to make the button bigger */
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px; /* Adjust font size to make the text bigger */
+}
+
+.confirm-button {
+  display: inline-block;
+  padding: 7px 25px; /* Adjust padding to make the button bigger */
+  background-color: RGBA(56, 96, 178, 1); /* Specify the blue background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px; /* Adjust font size to make the text bigger */
+}
+
+.confirm-delete p {
+  margin-top: 45px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  color: RGBA(116, 116, 116, 1);
+}
+
+.confirm-delete button {
+  margin: 15px 15px;
+}
